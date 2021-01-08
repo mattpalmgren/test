@@ -25,9 +25,9 @@ jobs:
         RESOURCE_GROUP: rg-githubitpro
         RESOURCE_GROUP_REGION: southcentralus
         SERVER_NAME: gihtubactions
-        ADMIN_LOGIN: sarah
+        ADMIN_LOGIN: matt
       run: >
-        powershell -command "& '${{ env.OUTPUT_PATH }}\IaC\AzCLI\vmcreation.ps1'" 
+        powershell -command "& '${{ env.OUTPUT_PATH }}\IaC\AzCLI\CreateVM.ps1'" 
         -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
         -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }} 
         -servicePrincipalTenantId ${{ secrets.SERVICE_PRINCIPAL_TENANTID }} 
