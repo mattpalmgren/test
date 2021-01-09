@@ -28,6 +28,9 @@ jobs:
         ADMIN_LOGIN: matt
       run: >
         powershell -command "& '${{ env.OUTPUT_PATH }}\CreateVM.ps1'"
-
+        -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
+        -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }} 
+        -servicePrincipalTenantId ${{ secrets.SERVICE_PRINCIPAL_TENANTID }} 
+        -azureSubscriptionName ${{ secrets.AZURE_SUBSCRIPTION_ID }}
  
 
