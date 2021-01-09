@@ -27,7 +27,7 @@ jobs:
         SERVER_NAME: gihtubactions
         ADMIN_LOGIN: matt
       run: >
-        write-host "test"
+        powershell -command "& '${{ env.OUTPUT_PATH }}\CreateVM.ps1'"
 
  
 
