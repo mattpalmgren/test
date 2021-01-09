@@ -19,7 +19,15 @@ jobs:
     - name: look for ps1 file
       run: |
         ls '${{ env.OUTPUT_PATH }}'
-
+        
+    - name: provision virtual machine in azure
+      env:
+        RESOURCE_GROUP: rg-githubitpro
+        RESOURCE_GROUP_REGION: southcentralus
+        SERVER_NAME: gihtubactions
+        ADMIN_LOGIN: matt
+      run: >
+        write-host "test"
 
  
 
