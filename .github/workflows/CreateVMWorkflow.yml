@@ -26,7 +26,8 @@ jobs:
         RESOURCE_GROUP_REGION: southcentralus
         SERVER_NAME: gihtubactions
         ADMIN_LOGIN: matt
-      run: >
+ <#
+ run: >
         powershell -command "& '${{ env.OUTPUT_PATH }}\CreateVM.ps1'" 
         -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
         -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }} 
@@ -37,3 +38,4 @@ jobs:
         -serverName %SERVER_NAME% 
         -adminLogin %ADMIN_LOGIN% 
         -adminPassword ${{ secrets.VM_ADMIN_PASSWORD }} 
+#>
